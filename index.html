@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functional component</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <script>
+        {
+            function App() {
+                return <h1>Hello, React!</h1>;
+            }
+
+            ReactDOM.render(
+                <App />,
+                document.getElementById("root")
+            );
+        }
+
+    </script>
+
+
+
+
+    <div id="root"></div>
+    <script type="text/babel">
+        {
+
+            function Welcome() {
+                return <h1>welcome to react-functional component</h1>;
+            }
+
+            const root = ReactDOM.createRoot(document.getelEmentById("root"));
+            root.render(<welcome />);
+
+        }
+    </script>
+
+
+
+    <script>
+        {
+            function App() {
+                return (
+                    <div>
+                        <h1>Hello</h1>
+                        <p>This is paragraph</p>
+                    </div>
+                );
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+
+
+        }
+    </script>
+
+    <script>
+        {
+            function App() {
+                function handleClick() {
+                    alert("Button clicked!");
+                }
+
+                return <button onClick={handleClick}>Click Me</button>;
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        }
+
+    </script>
+
+    <div id="root"></div>
+    <script type="text/babel">
+        {
+            class Welcome extends React.component {
+                render() {
+                    return <h1> Welcome to React-class Component</h1>
+
+                }
+            }
+            const root = ReactDOM.createRoot(document.getelEmentById("root"));
+            root.render(<welcome />);
+        }
+    </script>
+
+
+    <!-- Multiple components render -->
+    <script>
+        {
+            function Header() {
+                return <h1>This is Header</h1>;
+            }
+
+            function Footer() {
+                return <h2>This is Footer</h2>;
+            }
+
+            function App() {
+                return (
+                    <div>
+                        <Header />
+                        <Footer />
+                    </div>
+                );
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+
+        }
+
+
+
+    </script>
+
+    <!-- Conditional render -->
+
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        {
+            function App() {
+                const isLogin = true;
+
+                return (
+                    <div>
+                        {isLogin ? <h1>Welcome User</h1> : <h1>Please Login</h1>}
+                    </div>
+                );
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        }
+    </script>
+    <div id="root"></div>
+
+    <!-- if-else -->
+
+    <script type="text/babel">
+        {
+            function App() {
+                const marks = 40;
+
+                if (marks > 50) {
+                    return <h1>Pass</h1>;
+                } else {
+                    return <h1>Fail</h1>;
+                }
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        }
+    </script>
+
+
+</body>
+
+</html>
