@@ -3,7 +3,7 @@ function calculateResult(){
     let total = 0;
     for(let i=1;i<=n;i++)
     {
-        let marks = parseFloat(prompt("Enter marks for Subject" + i));
+        let marks = parseFloat(prompt("Enter marks for Subject" + i)); 
         total = total + marks;
     }
     let average = total/n;
